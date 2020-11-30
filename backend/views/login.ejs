@@ -1,0 +1,38 @@
+  
+<% include _header %>
+
+
+<h1>Log in</h1>
+
+<div class="form-group"   size = "20">
+<form action="/login" method="post">
+<label for="email">Email </label>
+<input
+required
+autofocus
+type="email"
+id="email"
+name="email"
+class="form-control"
+placeholder="Enter Email"
+value="<%= typeof email != 'undefined' ? email : '' %>"
+/>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input
+required 
+type="password"
+id="password"
+name="password"
+class="form-control"
+placeholder="Enter Password"
+value="<%= typeof password != 'undefined' ? password : '' %>"
+/>
+<input type="submit" value="Log in" class="btn btn-primary btn-block">
+</form>
+<p class="lead mt-4">
+No Account? <a href="/signup">Sign Up</a>
+</p>
+
+<% include _footer %>

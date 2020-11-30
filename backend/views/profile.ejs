@@ -1,0 +1,14 @@
+<% include _header %>
+
+<% if ((currentUser) && (currentUser.id === user.id)) { %>
+  <a href="/chat" class="pull-right"> Join the Professional Business Chat Room?</a>
+<% } %>
+
+<h1><%= user.name() %></h1>
+<h2>Joined on <%= user.createdAt %></h2>
+
+<% if (user.bio) { %>
+  <p><%= user.bio %></p>
+<% } %>
+
+<% include _footer %>

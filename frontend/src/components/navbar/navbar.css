@@ -1,0 +1,10 @@
+li {
+  float: left;
+  padding: 0.5rem;
+}
+
+nav{
+   
+    border-style: solid;    
+    border-color: snow;
+}
