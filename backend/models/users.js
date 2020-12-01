@@ -81,9 +81,7 @@ userSchema.methods.isAuthenticated = function(myPlaintextPassword){
 	return(bcrypt.compareSync(myPlaintextPassword, this.password));
 
 };
-userSchema.methods.name = function(){
-	return this.displayName || this.username;
-};
+
 
 var User = mongoose.model('User', userSchema);
 module.exports = User;

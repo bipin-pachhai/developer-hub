@@ -2,8 +2,20 @@
     margin-top: 125px;
     width: 400px;
     height: 400px;
+  
   }
   img {
     margin-top: -70px;
   }
+  table {
+    
   
+  margin: 0.5rem;
+  }
+
+  td{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    
+  }

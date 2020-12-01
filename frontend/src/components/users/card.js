@@ -24,15 +24,27 @@ const UserCard = ({ userdetails }) => {
         <CardText >
         <p>{userdetails.bio}!</p>
         <p><b>Works at: </b> {userdetails.company}</p>
+        <FaMapMarkerAlt /> {userdetails.city}<br/><br/>
         <FaGithub />@{userdetails.username}<br/>
         
-          <FaMapMarkerAlt /> {userdetails.city}<br/><br/>
-          <div className="grid mx-5 px-3">
-            <FaDove/>
-            <GoOrganization/>
-            <GoStar/>
-          </div><br/><br/>
-          <p><b>Joined Developer Hub: </b> {userdetails.createdAt}</p>
+        <table className="d-table-row-py-0"> 
+			  <tr> 
+        <td><GoOrganization/></td>
+        <td><GoStar/></td>  
+        <td><FaDove/></td>
+		  	</tr> 
+		  	<tr> 
+        <td>{Math.floor(Math.random() * Math.floor(1000))}<b> Followers</b> </td>
+        <td>{Math.floor(Math.random() * Math.floor(10000))}<b> Stars</b> </td>  
+        <td>{Math.floor(Math.random() * Math.floor(95))} <b>Tweets</b> </td> 
+			</tr> 
+	  	</table><br/>
+      <p><b>Member Since: </b> {(userdetails.createdAt).slice(0, 10)}</p>
+          
+    
+          
+          <br/>
+          
         </CardText>
       </CardBody>
     </Card>
