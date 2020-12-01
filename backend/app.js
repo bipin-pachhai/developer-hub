@@ -43,8 +43,8 @@ mongoose
     console.log("DB CONNECTED");
   });
 
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+//app.set("views", path.join(__dirname, "views"));
+//app.set("view engine", "ejs");
 app.use(routes);
 app.use(errorHandler);
 const port = process.env.PORT || 3001;
